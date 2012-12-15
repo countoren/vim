@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Volumes/C/Projects/ESTOnline'
+let g:netrw_dirhist_2='/Volumes/C/Projects/LicenseServerBackend'
+let g:netrw_dirhist_3='/Users/orenrozen/Desktop/Itortakalot'
+let g:netrw_dirhist_4='/Volumes/C/Projects/ESTOnline'
