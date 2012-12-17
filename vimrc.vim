@@ -32,8 +32,8 @@ let g:tex_flavor='latex'
 
 
 
-let $MYVIMRC = $HOME."/Dropbox/Vim/vimrc.vim"
-let $VIMFolder = $HOME."/Dropbox/Vim/"
+let $VIMFolder = expand(getcwd())."/"
+let $MYVIMRC = $VIMFolder."vimrc.vim"
 
 
 " /*** FlutePlayer Plugin ****/
@@ -76,7 +76,8 @@ set shiftwidth=4
 
 
 " /*** Background  ***/
-so ~/DropBox/Vim/Colors/wombat256mod.vim
+let $backgroundFile = $VIMFolder."Colors/wombat256mod.vim"
+source $backgroundFile
 
 
 " /*** NERDTree Config ***/
