@@ -1,3 +1,11 @@
-set runtimepath+=~/Dropbox/vim
-source ~/Dropbox/vim/vimrc.vim
+let $CurrentSystem= 'HomeMacBook'
+
+let $VIMFolder ='~/Dropbox/vim/'
+
+
+
+let $MYVIMRC = $VIMFolder."vimrc.vim"
+
+set runtimepath+=$VIMFolder
+source $MYVIMRC
 

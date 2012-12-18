@@ -32,8 +32,6 @@ let g:tex_flavor='latex'
 
 
 
-let $VIMFolder = expand('%:h')."/"
-let $MYVIMRC = $VIMFolder."vimrc.vim"
 
 
 " /*** FlutePlayer Plugin ****/
