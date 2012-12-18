@@ -1,0 +1,33 @@
+snippet grp "group :name do ... end" !b
+group :${1:GroupName} do
+	$2
+end 
+endsnippet
+snippet rspec "rspec group gems def" !b
+group :test do
+	gem 'rspec-rails'
+	gem 'capybara'
+	gem 'ruby_gntp'
+	gem 'guard-rspec'
+end 
+endsnippet
+snippet create "create method" 
+# POST /$1
+# POST /$1.json
+def create
+  @${2:user} = ${1:User}.new(params[:$2])
+
+  respond_to do |format|
+    if @$2.save
+      format.html { redirect_to root_url, notice: @$2.name + ' ,Wellcome' }
+      format.json { render json: @$2, status: :created, location: @$2 }
+    else
+      format.html { render action: "new" }
+      format.json { render json: @$2.errors, status: :unprocessable_entity }
+    end
+  end
+end
+endsnippet
+snippet db "debugger" 
+debugger
+endsnippet

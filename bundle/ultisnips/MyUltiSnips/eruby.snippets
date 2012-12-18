@@ -1,0 +1,98 @@
+snippet formt "form tag" !b
+<%= form_tag do %>
+	$1
+	<p class="button"> <%= submit_tag %> </p>
+<% end %>
+endsnippet
+snippet t.label "label_tag" !b
+	<p>
+		<%= label_tag :$1 %><br />
+		<%= $2_tag :$1  , params[:$1] %>
+	</p>
+endsnippet
+
+snippet btn "button_to" 
+<%= button_to ${1:buttonText} , ${2:path} %>
+endsnippet
+snippet div "div id" 
+<div${1: ${2:div}="$3"}>
+    $4
+</div>
+endsnippet
+snippet ifelse "if else end" 
+<% if ${1:condition} %>
+	$1
+<% else %>
+	$2
+<% end %>
+endsnippet
+snippet linkto "link_to"
+<%= link_to "${1:link}" , ${2:path} %>
+endsnippet
+
+snippet ffwe "form for with error" 
+<%= form_for @${1:user} do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @$1.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+$2
+<% end %>
+endsnippet
+
+
+snippet ft "text field with class" 
+<div class="field">
+		<%= f.label :${1:name} %><br />
+		<%= f.text_field :$1 %>
+</div>
+endsnippet
+snippet cbs "class button submit" 
+<div class="actions">
+  <%= f.submit %>
+</div>
+endsnippet
+snippet = "<%= %>" 
+<%= $1 %>
+endsnippet
+snippet rt "ruby tag : <% %>"
+<% $1 %>
+endsnippet
+snippet h "h tag"
+<h$1>$2</h$1>
+endsnippet
+snippet t "genral tag" 
+<${1:a}${2: ${3:class}="$4"}>$5</$1>
+endsnippet
+snippet utf8 "enconding utf" !b
+<%# encoding: utf-8 %>
+endsnippet
+snippet r "<% %>" 
+<% $1 %>
+endsnippet
+snippet table "<table>" 
+<table>
+	$1
+</table>
+endsnippet
+snippet tr "<tr>" 
+<tr>
+	$1
+</tr>
+endsnippet
+snippet th "<th>" 
+<th> $1 </th>
+endsnippet
+snippet td "<td>" 
+<td> $1 </td>
+endsnippet
+snippet jq "jquery tag $()"
+$("#$1").$2
+endsnippet
