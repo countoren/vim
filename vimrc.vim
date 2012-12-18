@@ -96,6 +96,8 @@ nmap <silent> <leader>n :NERDTreeToggle<CR>
 "Command line map
 nnoremap ; :
 
+" If I forgot to sudo a file, do that with :w!!
+cmap w!! %!sudo tee > /dev/null %
 
 " file types
 
